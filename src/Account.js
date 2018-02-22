@@ -14,7 +14,7 @@ export default class Account extends Component {
 
   handleDepositClick(e) {
     e.preventDefault();
-    if (isNaN(this.refs.amount.value)) {
+    if (isNaN(this.refs.amount.value) || this.refs.amount.value < 0) {
       console.log("Not a number");
     }
     else {
